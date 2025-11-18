@@ -20,6 +20,9 @@ def main():
         x = tmr#練習5
         screen.blit(bg_img, [-x, 0])#練習5(+にすると反対に流れていってしまうので-にする)
         screen.blit(bg_img2, [-x+1600, 0])#練習7 練習8
+        screen.blit(bg_img, [-x+3199, 0])
+        if x >= 3199:
+            tmr = 0#練習9
         screen.blit(kk_img,[300,200])#練習4
         pg.display.update()
         tmr += 1        
