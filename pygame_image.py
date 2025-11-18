@@ -28,14 +28,18 @@ def main():
         
         kk_rct.move_ip(-1,0)#演習1①
         key_lst = pg.key.get_pressed()#練習10
+
+        x=0
+        y=0
         if key_lst[pg.K_UP]: 
-            kk_rct.move_ip(0,-1)
+            y-=1
         if key_lst[pg.K_DOWN]: 
-            kk_rct.move_ip(0,+1)
+            y=1
         if key_lst[pg.K_LEFT]: 
-            kk_rct.move_ip(-1,0)
+            x-=1
         if key_lst[pg.K_RIGHT]: 
-            kk_rct.move_ip(+2,0)
+            x+=2#演習1②
+        kk_rct.move_ip(x,y)#演習2
         
         screen.blit(kk_img, kk_rct) #練習4 練習10
         pg.display.update()#練習9
